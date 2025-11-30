@@ -28,18 +28,27 @@ def main(message):
 def callback_message(callback):
     if callback.data == 'Kanals':
         markup = types.InlineKeyboardMarkup()
-        btn1 = types.InlineKeyboardButton('111111', url='https://t.me/zhopsCoDM')
-        bot.edit_message_text('хуй', callback.message.chat.id, callback.message.message_id, reply_markup=markup)
-
-
-
+        btn1 = types.InlineKeyboardButton('1. 𝐒𝐮𝐧𝐚𝐩𝐬𝐞 𝐇𝐮𝐛', url='https://t.me/Sunapse_Hub')
+        markup.row(btn1)
+        bot.edit_message_text('Ссылки на каналы сетки:', callback.message.chat.id, callback.message.message_id, reply_markup=markup)
 
     if callback == 'Chats':
-        bot.edit_message_text('хуй', callback.message.chat.id, callback.message.message_id)
+        markup = types.InlineKeyboardMarkup()
+        btn1 = types.InlineKeyboardButton('1. 𝐒𝐮𝐧𝐚𝐩𝐬𝐞 𝐇𝐮𝐛', url='https://t.me/Sunapse_Hub')
+        markup.row(btn1)
+        bot.edit_message_text('Ссылки на чаты сетки:', callback.message.chat.id, callback.message.message_id, reply_markup=markup)
+
     if callback == 'ADMKanals':
-        bot.edit_message_text('хуй', callback.message.chat.id, callback.message.message_id)
+        markup = types.InlineKeyboardMarkup()
+        btn1 = types.InlineKeyboardButton('1. 𝐒𝐮𝐧𝐚𝐩𝐬𝐞 𝐇𝐮𝐛', url='https://t.me/Sunapse_Hub')
+        markup.row(btn1)
+        bot.edit_message_text('Стать администратором чата сетки:', callback.message.chat.id, callback.message.message_id, reply_markup=markup)
+
     if callback == 'ADMChats':
-        bot.edit_message_text('хуй', callback.message.chat.id, callback.message.message_id)
+        markup = types.InlineKeyboardMarkup()
+        btn1 = types.InlineKeyboardButton('1. 𝐒𝐮𝐧𝐚𝐩𝐬𝐞 𝐇𝐮𝐛', url='https://t.me/Sunapse_Hub')
+        markup.row(btn1)
+        bot.edit_message_text('Стать администратором канала сетки:', callback.message.chat.id, callback.message.message_id, reply_markup=markup)
 
 
 bot.polling(none_stop=True)
